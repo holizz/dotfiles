@@ -1,0 +1,25 @@
+#!/bin/sh
+
+# git fetch/rebase/push
+
+set -e
+
+BRANCH=`git branch | grep '^\*' | cut -d' ' -f2`
+REMOTE=`git config branch.${BRANCH}.remote`
+
+if [ ${REMOTE}X = X ]; then
+  echo "Current branch not tracking a remote branch"
+  exit 1
+fi
+
+MERGE=`git config branch.${BRANCH}.merge`
+
+if [ `echo ${MERGE} | cut -d/ -f1-2`/X != refs/heads/X ]; then
+  echo "Unexpected value of branch.${BRANCH}.merge"
+fi
+
+REMOTE_BRANCH=${REMOTE}/`echo ${MERGE} | cut -d/ -f3-`
+
+git fetch
+git rebase --preserve ${REMOTE_BRANCH}
+git push

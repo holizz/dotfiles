@@ -1,0 +1,28 @@
+[user]
+  name = Tom Adams
+  email = tom@holizz.com
+[push]
+  default = current
+[alias]
+  p = !git pull --ff-only && git submodule update --init --recursive
+  st = status
+  ci = commit
+  cia = commit -a
+  di = diff
+  suir = !git submodule sync && git submodule update --init --recursive
+  graph = log --graph --full-history --all --pretty=format:"%h%x09%x1b[32m%d%x1b[0m%x20%s"
+  empty = commit --allow-empty -m Empty
+  test = !tmux new-window -d -t 91 -c `pwd` -n deploy 'git push origin +HEAD:testing'
+[core]
+  whitespace = trailing-space
+  excludesfile = ~/.gitexcludesfile
+[hooks]
+  allownonascii = true
+[color]
+  ui = auto
+[diff]
+  tool = vimdiff
+[difftool]
+  prompt = false
+[pull]
+  ff = "only"

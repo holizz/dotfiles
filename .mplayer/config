@@ -1,0 +1,5 @@
+# Copy a font to subfont.ttf
+framedrop=yes
+#ao=sdl
+nojoystick=yes
+subcp=UTF-8

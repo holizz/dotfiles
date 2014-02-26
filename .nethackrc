@@ -1,0 +1,2 @@
+OPTIONS=boulder:0,showexp,time,!autopickup,pushweapon
+OPTIONS=monsters:abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@W'&;:~]

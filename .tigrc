@@ -1,0 +1,4 @@
+bind generic O !git checkout %(commit)
+bind generic c !git cherry-pick -n %(commit)
+bind main G !true # why would I want to run git gc?
+bind main R !git revert %(commit)

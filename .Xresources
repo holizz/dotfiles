@@ -1,0 +1,44 @@
+!! urxvt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+urxvt*font:            -*-terminus-medium-*-*-*-20-*-*-*-*-*-*-*
+urxvt*boldFont:        -*-terminus-bold-*-*-*-20-*-*-*-*-*-*-*
+urxvt*scrollBar:       False
+urxvt*urgentOnBell:    True
+urxvt*visualBell:      False
+urxvt*iso14755_52:     False
+
+! Compatibility ( https://bugzilla.redhat.com/show_bug.cgi?id=474108 )
+urxvt*termName:        xterm
+
+! URIs
+!urxvt.perl-ext-common: selection,matcher
+urxvt.perl-ext-common: default,-selection
+urxvt.urlLauncher:     firefox
+urxvt.matcher.button:  1
+
+! Tango colour scheme
+urxvt*background:      #000000
+urxvt*foreground:      #ffffff
+urxvt*color0:          #000000
+urxvt*color8:          #555753
+
+urxvt*color1:          #cc0000
+urxvt*color9:          #ef2929
+
+urxvt*color2:          #4e9a06
+urxvt*color10:         #8ae234
+
+urxvt*color3:          #c4a000
+urxvt*color11:         #fce94f
+
+urxvt*color4:          #3465a4
+urxvt*color12:         #729fcf
+
+urxvt*color5:          #75507b
+urxvt*color13:         #ad7fa8
+
+urxvt*color6:          #06989a
+urxvt*color14:         #34e2e2
+
+urxvt*color7:          #d3d7cf
+urxvt*color15:         #eeeeec
