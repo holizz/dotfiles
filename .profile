@@ -10,6 +10,7 @@ export GIT_PAGER='less -E'
 export EDITOR=vi
 export VISUAL=vi
 [ -x /usr/bin/vim ] && export EDITOR=vim && export VISUAL=vim
+which nvim >/dev/null 2>/dev/null && export EDITOR=nvim && export VISUAL=nvim
 export NODE_DISABLE_COLORS=1
 
 # L10N and I18N
@@ -54,10 +55,6 @@ alias jpp="python -m json.tool"
 # Wait for host $1 to respond to pings
 alias pong="echo -e 'import subprocess,sys\nwhile subprocess.call\
 (sys.argv[1:]):pass' | python - ping -c1"
-
-# Editors (un-Xifying)
-alias vim="vim -X"
-alias emacs="emacs -nw"
 
 # WWW
 alias lynx="lynx -accept_all_cookies -cookie_file=~/.cookie"

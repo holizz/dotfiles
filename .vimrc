@@ -13,8 +13,11 @@ set history=1000
 set wildmenu wildmode=list:longest
 set shortmess=aoOtTI
 set undofile undodir=~/.vim/bak,.
-set cryptmethod=blowfish
+if has("cryptv")
+  set cryptmethod=blowfish
+end
 set nomodeline " security
+set t_Co=256 " use all 256 colours
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ Mappings
@@ -177,6 +180,9 @@ augroup END
 
 " vim-go - don't complain when editing files as root
 let g:go_disable_autoinstall = 1
+
+" disable syntastic for Go - we use vim-go
+let g:syntastic_disabled_filetypes=['go']
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ .vimrc.local
