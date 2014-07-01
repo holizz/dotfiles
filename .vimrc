@@ -194,6 +194,4 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ Unbundle
 
-if filereadable(expand('~/.vim/bundle/vim-unbundle/unbundle.vim'))
-  source ~/.vim/bundle/vim-unbundle/unbundle.vim
-endif
+runtime bundle/vim-unbundle/unbundle.vim
