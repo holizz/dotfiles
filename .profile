@@ -10,7 +10,6 @@ export GIT_PAGER='less -E'
 export EDITOR=vi
 export VISUAL=vi
 [ -x /usr/bin/vim ] && export EDITOR=vim && export VISUAL=vim
-which nvim >/dev/null 2>/dev/null && export EDITOR=nvim && export VISUAL=nvim
 export NODE_DISABLE_COLORS=1
 
 # L10N and I18N
